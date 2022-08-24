@@ -1,4 +1,4 @@
-# Starter kit for smart contracts developing
+# Starter kit for developing smart contracts
 
 ### How to install and use
 
