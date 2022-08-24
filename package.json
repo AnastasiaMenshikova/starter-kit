@@ -1,7 +1,7 @@
 {
   "name": "starter-kit",
   "version": "0.0.1",
-  "description": "hardhat smart contracts deployment",
+  "description": "A repo for hardhat smart contracts deployment",
   "main": "index.js",
   "repository": "https://github.com/AnastasiaMenshikova/starter-kit",
   "author": "Anastasia Menshikova",
