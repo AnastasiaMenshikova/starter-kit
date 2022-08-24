@@ -10,11 +10,8 @@ const MAINNET_RPC_URL =
   process.env.MAINNET_RPC_URL ||
   process.env.ALCHEMY_MAINNET_RPC_URL ||
   `https://mainnet.infura.io/v3/${INFURA_ID}`;
-const OPTIMISM_RPC_URL = process.env.OPTIMISM_RPC_URL;
-const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
-const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const REPORT_GAS = process.env.REPORT_GAS || false;
 
@@ -40,12 +37,12 @@ module.exports = {
       chainId: 5,
     },
     goerliOptimism: {
-      url: OPTIMISM_RPC_URL,
+      url: process.env.OPTIMISM_RPC_URL,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       chainId: 420,
     },
     mumbai: {
-      url: MUMBAI_RPC_URL,
+      url: process.env.MUMBAI_RPC_URL,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       chainId: 80001,
     },
@@ -59,6 +56,13 @@ module.exports = {
       url: MAINNET_RPC_URL,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       chainId: 137,
+    },
+    alfajores: {
+      // https://alfajores.celoscan.io
+      // https://celo.org/developers/faucet
+      url: process.env.ALFAJORES_RPC_URL,
+      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+      chainId: 44787,
     },
   },
   etherscan: {
