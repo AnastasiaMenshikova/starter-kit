@@ -25,12 +25,6 @@ module.exports = {
       //     url: MAINNET_RPC_URL,
       // },
     },
-    rinkeby: {
-      // will be deprecated in ~ Q2/Q3 2023
-      url: `https://rinkeby.infura.io/v3/${INFURA_ID}`,
-      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-      chainId: 4,
-    },
     goerli: {
       url: `https://goerli.infura.io/v3/${INFURA_ID}`,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
@@ -60,6 +54,9 @@ module.exports = {
     alfajores: {
       // https://alfajores.celoscan.io
       // https://celo.org/developers/faucet
+
+      // to verify contract use:
+      // hardhat --network alfajores sourcify
       url: process.env.ALFAJORES_RPC_URL,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       chainId: 44787,
