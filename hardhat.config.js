@@ -52,7 +52,7 @@ module.exports = {
       chainId: 137,
     },
     alfajores: {
-      // https://alfajores.celoscan.io
+      // https://explorer.celo.org/alfajores
       // https://celo.org/developers/faucet
 
       // to verify contract use:
