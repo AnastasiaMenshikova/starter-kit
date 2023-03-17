@@ -25,10 +25,10 @@ module.exports = {
       //     url: MAINNET_RPC_URL,
       // },
     },
-    goerli: {
-      url: `https://goerli.infura.io/v3/${INFURA_ID}`,
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${INFURA_ID}`,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-      chainId: 5,
+      chainId: 11155111,
     },
     goerliOptimism: {
       url: process.env.OPTIMISM_RPC_URL,
